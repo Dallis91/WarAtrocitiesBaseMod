@@ -1,0 +1,26 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = { NOT = { has_variable = global.wa_nuclear_soot } }
+				set_variable = { var = global.wa_nuclear_soot value = 0 }
+			}
+			every_country = {
+				wa_init_integration_variable = yes
+				wa_init_nuclear_stockpiles = yes
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = {
+						NOT = { is_core_of = ROOT }
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+	}
+}

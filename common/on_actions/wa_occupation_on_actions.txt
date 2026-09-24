@@ -1,0 +1,11 @@
+on_actions = {
+	on_monthly = {
+		effect = {
+			if = {
+				limit = { has_idea = wa_repression_high }
+				add_stability = -0.005
+			}
+			wa_apply_local_resistance_from_presence = yes
+		}
+	}
+}

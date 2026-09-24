@@ -1,0 +1,42 @@
+opinion_modifiers = {
+
+	wa_harsh_occupation_opinion = {
+		value = -25
+		decay = 1
+	}
+
+	wa_collaborative_occupation_opinion = {
+		value = 10
+		decay = 1
+	}
+
+	wa_repression_international = {
+		value = -15
+		decay = 0.5
+	}
+
+	wa_nuclear_use_opinion = {
+		value = -30
+		decay = 0.5
+	}
+
+	wa_advanced_nuke_opinion = {
+		value = -40
+		decay = 0.4
+	}
+
+	wa_thermonuclear_use_opinion = {
+		value = -60
+		decay = 0.3
+	}
+
+	wa_nuclear_patron_opinion = {
+		value = 40
+		decay = 0.5
+	}
+
+	wa_nuclear_adversary_opinion = {
+		value = 35
+		decay = 0.5
+	}
+}

@@ -1,0 +1,33 @@
+ideas = {
+	country = {
+		wa_covert_alliance_spirit = {
+			picture = generic_pp_unity_bonus
+			modifier = {
+			}
+			removal_cost = -1
+		}
+		wa_exposed_covert_diplomacy = {
+			picture = generic_intelligence_bonus
+			modifier = {
+				political_power_factor = -0.05
+				improve_relations_maintain_cost_factor = 0.10
+			}
+			removal_cost = -1
+		}
+		wa_discovered_small_neighbor = {
+			picture = generic_morale_bonus
+			modifier = {
+				stability_weekly = -0.005
+			}
+			removal_cost = -1
+		}
+		wa_easy_justify_vs_exposed = {
+			picture = generic_fascism_drift_bonus
+			modifier = {
+				generate_wargoal_tension = -0.25
+				justify_war_goal_time = -0.25
+			}
+			removal_cost = -1
+		}
+	}
+}
