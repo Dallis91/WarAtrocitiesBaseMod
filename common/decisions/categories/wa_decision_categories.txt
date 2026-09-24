@@ -1,0 +1,58 @@
+decision_categories = {
+
+	wa_occupation_policy_category = {
+		icon = generic_form_nation
+		picture = GFX_decision_cat_picture_generic
+		allowed = { always = yes }
+		visible = {
+			any_controlled_state = {
+				NOT = { is_core_of = ROOT }
+				is_controlled_by = ROOT
+			}
+		}
+		priority = 90
+	}
+
+	wa_population_management_category = {
+		icon = generic_form_nation
+		picture = GFX_decision_cat_picture_generic
+		allowed = { always = yes }
+		visible = {
+			OR = {
+				has_idea = wa_refugee_crisis
+				any_controlled_state = {
+					OR = {
+						has_dynamic_modifier = { modifier = wa_refugee_influx }
+						has_dynamic_modifier = { modifier = wa_population_displacement }
+					}
+				}
+				has_idea = wa_nuclear_winter_mild
+				has_idea = wa_nuclear_winter_moderate
+				has_idea = wa_nuclear_winter_severe
+			}
+		}
+		priority = 85
+	}
+
+	wa_rules_of_engagement_category = {
+		icon = generic_political_discourse
+		picture = GFX_decision_cat_picture_generic
+		allowed = { always = yes }
+		visible = { has_war = yes }
+		priority = 88
+	}
+
+	wa_nuclear_weapons_category = {
+		icon = generic_research
+		picture = GFX_decision_cat_picture_generic
+		allowed = { always = yes }
+		visible = {
+			OR = {
+				has_tech = nuclear_bombs
+				has_tech = wa_improved_fission_warhead
+				has_tech = wa_thermonuclear_warhead
+			}
+		}
+		priority = 95
+	}
+}

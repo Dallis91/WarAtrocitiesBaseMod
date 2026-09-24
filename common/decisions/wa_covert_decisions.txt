@@ -1,0 +1,32 @@
+# Covert alliance decisions (neighbor response to advanced nuclear use)
+
+wa_covert_alliance_category = {
+	icon = generic_prepare_civil_war
+	priority = 10
+	visible = {
+		has_country_flag = wa_nuke_neighbor_choice_available
+	}
+}
+
+wa_choose_open_alliance = {
+	icon = generic_nationalism
+	available = { has_country_flag = wa_nuke_neighbor_choice_available }
+	visible = { has_country_flag = wa_nuke_neighbor_choice_available }
+	cost = 25
+	complete_effect = {
+		clr_country_flag = wa_nuke_neighbor_choice_available
+		custom_effect_tooltip = wa_open_alliance_tt
+	}
+}
+
+wa_choose_covert_alliance = {
+	icon = generic_intelligence_bonus
+	available = { has_country_flag = wa_nuke_neighbor_choice_available }
+	visible = { has_country_flag = wa_nuke_neighbor_choice_available }
+	cost = 10
+	complete_effect = {
+		clr_country_flag = wa_nuke_neighbor_choice_available
+		wa_grant_covert_alliance = yes
+		custom_effect_tooltip = wa_covert_alliance_tt
+	}
+}
